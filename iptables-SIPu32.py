@@ -30,7 +30,9 @@ if len(sys.argv) < 2:
     print
     print "Example: "
     print "%s 'INVITE sip:ciccio.pasticcio@example.com:5060'\t\t to match all INVITE to sip:ciccio.pasticcio@example.com:5060" % sys.argv[0] 
-    print "the -d switch enables the debugging (not suitable for embedding in iptables commands)"
+    print "\nThe -d switch enables the debugging (not suitable for embedding in iptables commands)"
+    print "\n"
+    print "This script works only with SIP over UDP."
     sys.exit(-1)
    
    
