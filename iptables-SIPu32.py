@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
 """
-This script produce a GNU/Linux iptables u32 rule matching against SIP requests.
+This script produces a GNU/Linux iptables u32 rule matching against SIP requests.
 
 The match is against the first line of the SIP message
 
-Usage:
+Usage example:
 
-./u32SIP.py REGISTER sip:100@pbx.domain.local
+./iptables-SIPu32.py udp "REGISTER sip:100@pbx.domain.local"
 
 
 """
@@ -29,7 +29,7 @@ if len(sys.argv) < 3:
     print "Usage: %s [-d] udp|tcp 'text'" % sys.argv[0]
     print
     print "Example: "
-    print "%s 'INVITE sip:ciccio.pasticcio@example.com:5060'\t\t to match all INVITE to sip:ciccio.pasticcio@example.com:5060" % sys.argv[0] 
+    print "%s udp 'INVITE sip:ciccio.pasticcio@example.com:5060'\t\t to match all UDP INVITE to sip:ciccio.pasticcio@example.com:5060" % sys.argv[0] 
     print "the -d switch enables the debugging (not suitable for embedding in iptables commands)"
     sys.exit(-1)
    
